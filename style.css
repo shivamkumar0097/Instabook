@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #f0f2f5;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.left {
+    flex: 1;
+}
+
+.left h1 {
+    color: #1877f2;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.left p {
+    font-size: 24px;
+    color: #1c1e21;
+}
+
+.right {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 396px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 17px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-login {
+    background: #1877f2;
+    color: #fff;
+}
+
+.btn-signup {
+    background: #42b72a;
+    color: #fff;
+    margin-top: 12px;
+}
+
+.msg {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.header {
+    background: #fff;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    color: #1877f2;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.main {
+    max-width: 680px;
+    margin: 20px auto;
+    padding: 0 16px;
+}
+
+.post-box,
+.post {
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.post-input {
+    display: flex;
+    gap: 8px;
+}
+
+.post-input input {
+    flex: 1;
+    border: none;
+    background: #f0f2f5;
+    padding: 10px 12px;
+    border-radius: 20px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #1877f2;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.post-btns {
+    display: flex;
+    border-top: 1px solid #ddd;
+    margin-top: 8px;
+    padding-top: 4px;
+}
+
+.post-btns button {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.logout {
+    background: #e4e6eb;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
