@@ -1,15 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <!DOCTYPE html>
+    <html lang="en">
 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Facebook - Shivam</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-    <script src="script.js"></script>
+    <body>
+        <div id="loginPage" class="login-page">
+            <div class="container">
+                <div class="left">
+                    <h1>facebook</h1>
+                    <p>Connect with friends.</p>
+                </div>
+                <div class="right">
+                    <div class="msg" id="msg"></div>
+                    <input type="text" id="email" placeholder="Email">
+                    <input type="password" id="pass" placeholder="Password">
+                    <button class="btn btn-login" onclick="login()">Log in</button>
+                    <button class="btn btn-signup" onclick="showSignup()">Create account</button>
+                </div>
+            </div>
+        </div>
+        <div id="signupPage" class="login-page hidden">
+            <div class="right">
+                <h2>Sign Up</h2>
+                <div class="msg" id="smsg"></div>
+                <input type="text" id="sname" placeholder="Name">
+                <input type="text" id="semail" placeholder="Email">
+                <input type="password" id="spass" placeholder="Password">
+                <button class="btn btn-signup" onclick="signup()">Sign Up</button>
+                <button class="btn" onclick="showLogin()" style="background:#ddd;margin-top:8px;">Back</button>
+            </div>
+        </div>
+        <div id="feedPage" class="hidden">
+            <div class="header">
+                <div class="logo">facebook</div>
+                <div style="display:flex;align-items:center;gap:8px;">
+                    <div class="avatar" id="avatar">U</div>
+                    <span id="userName">User</span>
+                    <button class="logout" onclick="logout()">Logout</button>
+                </div>
+            </div>
+            <div class="main">
+                <div class="post-box">
+                    <div class="post-input">
+                        <div class="avatar" id="avatar2">U</div>
+                        <input type="text" id="postText" placeholder="What's on your mind?">
+                    </div>
+                    <div class="post-btns"><button onclick="createPost()">Post</button></div>
+                </div>
+                <div id="posts"></div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+    </html>
+
+ 
 </body>
+
 </html>
