@@ -7,46 +7,84 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="loginPage" class="page">
+<div id="menuModal" class="modal hidden">
+  <div class="modal-box">
+    <h3>Menu</h3>
+    <div class="menu-item" onclick="menuAction('profile')">👤 Profile</div>
+    <div class="menu-item" onclick="menuAction('logout')">🚪 Logout</div>
+    <div class="menu-item" onclick="closeMenu()">✕ Close</div>
+  </div>
+</div>
+    <div id="loginPage">
   <div class="login-box">
     <h1>facebook</h1>
     <input type="text" id="email" placeholder="Email">
     <input type="password" id="pass" placeholder="Password">
     <button onclick="login()">Log in</button>
-    <p onclick="showSignup()">Create account</p>
+    <p onclick="showSignup()">Create new account</p>
   </div>
 </div>
-<div id="signupPage" class="page hidden">
+<div id="signupPage" class="hidden">
   <div class="login-box">
     <h2>Sign Up</h2>
-    <input type="text" id="sname" placeholder="Name">
+    <input type="text" id="sname" placeholder="Full name">
     <input type="text" id="semail" placeholder="Email">
     <input type="password" id="spass" placeholder="Password">
     <button onclick="signup()">Sign Up</button>
-    <p onclick="showLogin()">Back</p>
+    <p onclick="showLogin()">Back to login</p>
   </div>
 </div>
 <div id="feedPage" class="hidden">
   <div class="top-bar">
     <span class="fb-logo">facebook</span>
-    <div class="top-icons"><span>+</span><span>🔍</span><span>☰</span></div>
+    <div class="top-icons">
+      <span onclick="alert('New post')">+</span>
+      <span onclick="showSearch()">🔍</span>
+      <span onclick="showMenu()">☰</span>
+    </div>
   </div>
   <div class="nav-bar">
-    <span class="active">🏠</span><span>👥</span><span>💬</span><span>🔔</span><span>📺</span><span>🏪</span>
+    <span class="active">🏠</span>
+    <span>👥</span>
+    <span>💬</span>
+    <span>🔔</span>
+    <span>📺</span>
+    <span>🏪</span>
   </div>
   <div class="story-row">
-    <div class="story add"><div class="story-img">+</div><span>Add to Story</span></div>
-    <div class="story"><div class="story-img" style="background:#e74c3c;">S</div><span>Sam</span></div>
-    <div class="story"><div class="story-img" style="background:#3498db;">K</div><span>Kaori</span></div>
+    <div class="story"><div class="story-add">+</div><span>Your Story</span></div>
+    <div class="story"><div class="story-av" style="background:#e74c3c;">S</div><span>Sam</span></div>
+    <div class="story"><div class="story-av" style="background:#9b59b6;">K</div><span>Kaori</span></div>
+    <div class="story"><div class="story-av" style="background:#3498db;">M</div><span>Mike</span></div>
   </div>
   <div class="post-create">
     <div class="avatar" id="myAvatar">U</div>
     <input type="text" id="postText" placeholder="What's on your mind?">
-    <span onclick="createPost()">📷</span>
+    <span onclick="createPost()" style="font-size:20px;cursor:pointer;">📝</span>
   </div>
   <div id="posts"></div>
   <div class="bottom-nav">
-    <span>🏠</span><span>👥</span><span>➕</span><span>🔔</span><span>☰</span>
+    <span onclick="showFeed()">🏠</span>
+    <span>👥</span>
+    <span onclick="createPost()">➕</span>
+    <span>🔔</span>
+    <span onclick="showMenu()">☰</span>
+  </div>
+</div>
+<div id="searchPage" class="hidden">
+  <div class="top-bar"><span onclick="showFeed()" style="cursor:pointer;">←</span><span>Search</span></div>
+  <input type="text" id="searchInput" placeholder="Search" oninput="doSearch()" class="search-inp">
+  <div id="searchResults"></div>
+</div>
+<div id="profilePage" class="hidden">
+  <div class="top-bar"><span onclick="showFeed()" style="cursor:pointer;">←</span><span>Profile</span></div>
+  <div class="profile-box">
+    <div class="avatar big" id="profAvatar">U</div>
+    <h2 id="profName"></h2>
+    <p id="profEmail"></p>
+    <p id="profBio"></p>
+    <button onclick="editProfile()">Edit Profile</button>
+    <button onclick="logout()" class="btn-gray">Logout</button>
   </div>
 </div>
 <script src="script.js"></script>
