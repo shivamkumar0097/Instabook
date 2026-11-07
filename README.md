@@ -1,2 +1,2 @@
 # Instabook
-Repositories contain a project's files and version history.
+Repositories contain a `project's` files and version history.
